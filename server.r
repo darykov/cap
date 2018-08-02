@@ -3,7 +3,6 @@
 library(shiny)
 library(quanteda)
 library(stringr)
-library(ggplot2)
 
 shinyServer(function(input, output) {
   
@@ -192,7 +191,10 @@ shinyServer(function(input, output) {
       p
     }
   })
-  
+  url<-a("See Project Code on GitHub", href='https://github.com/darykov/cap')
+  output$ur <- renderUI({
+    tagList("URL link:", url)
+  })
   
   
   
